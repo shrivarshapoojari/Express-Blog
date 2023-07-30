@@ -1,0 +1,15 @@
+
+
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p> <%= para1 %> </p>
+ 
+ <% for(var i=0;i<posts.length ; i++) { %>
+    <p id="uname">Posted by <%= posts[i].uname%></p>
+<h1> <%= posts[i].postName %> </h1>
+<p> <%= posts[i].postContent.substring(0,100)+" ..." %>
+    <a href="/posts/<%=posts[i]._id%>">Read More</a>
+</p>
+<%}%>
+<%-include("partials/footer")-%>
